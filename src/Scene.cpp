@@ -192,10 +192,9 @@ void Scene::translateBox(int index, glm::vec3 translateVector) {
     translateVector.z=0.0f;
     this->boxes[index].translate(translateVector);
     for(int i =0;i < treasures.size();i++){
-      glm::vec3 result=boxes[index].getBoxPosition()-treasures[i].getTreasurePos();
-    if(abs(result.x)<=1 || abs(result.y)<=1)
-        std::cout<<"YES"<<std::endl;
-        }
+        std::cout<<treasures[i].getTreasurePos().x<<" "<<treasures[i].getTreasurePos().y<<std::endl;
+        std::cout<<boxes[index].getBoxPosition().x<<" "<<boxes[index].getBoxPosition().y<<std::endl;
+    }
 
 
 
